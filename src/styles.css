@@ -23,15 +23,17 @@ body {
   background: linear-gradient(180deg, #edf3ff 0%, var(--bg) 42%, #ffffff 100%);
   color: var(--text);
   line-height: 1.55;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container {
-  width: min(1120px, 92%);
+  width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
 }
 
 .hero {
-  padding: 68px 0 36px;
+  padding: clamp(44px, 6vw, 68px) 0 clamp(24px, 4vw, 36px);
 }
 
 .hero-box {
@@ -43,6 +45,33 @@ body {
   position: relative;
   overflow: hidden;
   isolation: isolate;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: clamp(16px, 2.4vw, 24px);
+  align-items: center;
+}
+
+.hero-text {
+  min-width: 0;
+}
+
+.hero-image-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-technician-image {
+  width: min(100%, 320px);
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.24);
+  background: rgba(255, 255, 255, 0.12);
+  display: block;
 }
 
 .hero-box::before,
@@ -135,7 +164,7 @@ h1 {
 }
 
 .section {
-  padding: 40px 0;
+  padding: clamp(28px, 4.8vw, 40px) 0;
 }
 
 .section-title {
@@ -162,6 +191,7 @@ h1 {
   border: 1px solid #e8edff;
   box-shadow: 0 8px 25px rgba(10, 24, 64, 0.06);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  min-width: 0;
 }
 
 .card:hover {
@@ -178,6 +208,18 @@ h1 {
 .card h3 {
   font-size: 18px;
   margin-bottom: 8px;
+}
+
+.rate-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #e7efff;
+  color: #1146b8;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .card ul {
@@ -199,6 +241,23 @@ h1 {
   left: 0;
   top: -1px;
   font-weight: 700;
+}
+
+.service-gallery {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.service-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #dbe6ff;
+  background: #eef3ff;
+  display: block;
 }
 
 .highlight {
@@ -251,6 +310,9 @@ h1 {
   border-radius: 12px;
   font-weight: 600;
   transition: all 0.2s ease;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .contact-chip:hover {
@@ -292,16 +354,35 @@ footer {
   .brands {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hero-image-wrap {
+    justify-content: center;
+  }
+
+  .hero-technician-image {
+    width: min(100%, 260px);
+  }
 }
 
 @media (max-width: 640px) {
-  .hero {
-    padding-top: 48px;
+  .hero-box {
+    padding: 24px 18px;
+    border-radius: 20px;
   }
 
-  .hero-box {
-    padding: 30px 22px;
-    border-radius: 20px;
+  .badge {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+
+  .hero p {
+    font-size: 14px;
+    margin-top: 12px;
   }
 
   .grid,
@@ -312,5 +393,37 @@ footer {
   .btn,
   .contact-chip {
     width: 100%;
+  }
+
+  .service-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .floating-call {
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+    right: 14px;
+    bottom: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    width: min(1120px, calc(100% - 24px));
+  }
+
+  .hero-box {
+    border-radius: 16px;
+    padding: 20px 14px;
+  }
+}
+
+@media (hover: none) {
+  .card:hover,
+  .btn-call:hover,
+  .floating-call:hover {
+    transform: none;
+    box-shadow: inherit;
   }
 }

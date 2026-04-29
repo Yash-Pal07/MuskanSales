@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" role="img" aria-labelledby="title desc">
+  <title id="title">Service Technician</title>
+  <desc id="desc">Illustration of a home appliance service technician.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dbe8ff" />
+      <stop offset="100%" stop-color="#b5ccff" />
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2d6dff" />
+      <stop offset="100%" stop-color="#1849be" />
+    </linearGradient>
+  </defs>
+  <rect width="360" height="480" rx="24" fill="url(#bg)" />
+  <circle cx="180" cy="140" r="62" fill="#ffd7b0" />
+  <path d="M108 126c5-43 35-66 72-66s67 23 72 66c-12-8-21-10-36-10H144c-15 0-24 2-36 10z" fill="#1f2a44" />
+  <rect x="88" y="212" width="184" height="190" rx="28" fill="url(#shirt)" />
+  <rect x="156" y="212" width="48" height="42" rx="8" fill="#ffd7b0" />
+  <circle cx="140" cy="288" r="12" fill="#f3f7ff" />
+  <circle cx="220" cy="288" r="12" fill="#f3f7ff" />
+  <path d="M126 346h108" stroke="#f3f7ff" stroke-width="10" stroke-linecap="round" />
+  <rect x="116" y="334" width="128" height="84" rx="12" fill="#f3f7ff" opacity="0.22" />
+  <text x="180" y="451" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="#1849be">
+    TECHNICIAN
+  </text>
+</svg>

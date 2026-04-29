@@ -13,6 +13,7 @@ export default function App() {
         phoneDisplay={CONTACT.phoneDisplay}
         phoneRaw={CONTACT.phoneRaw}
         whatsappUrl={CONTACT.whatsappUrl}
+        technicianImage={CONTACT.technicianImage}
       />
 
       <main>

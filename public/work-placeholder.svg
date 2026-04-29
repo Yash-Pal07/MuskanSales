@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Work Photo Placeholder</title>
+  <desc id="d">Placeholder image for technician work photos.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d9e7ff" />
+      <stop offset="100%" stop-color="#c1d6ff" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#g)" />
+  <rect x="36" y="34" width="328" height="192" rx="14" fill="#ffffff" opacity="0.85" />
+  <circle cx="120" cy="116" r="28" fill="#8eb0ff" />
+  <rect x="164" y="88" width="150" height="14" rx="7" fill="#8eb0ff" />
+  <rect x="164" y="116" width="118" height="12" rx="6" fill="#a5bfff" />
+  <rect x="164" y="140" width="136" height="12" rx="6" fill="#a5bfff" />
+  <text x="200" y="265" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" fill="#2b57bf">
+    ADD WORK PHOTO
+  </text>
+</svg>

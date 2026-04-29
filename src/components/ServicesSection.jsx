@@ -5,11 +5,26 @@ function ServiceCard({ service }) {
         {service.icon}
       </div>
       <h3>{service.title}</h3>
+      <p className="rate-chip">{service.rate}</p>
       <ul>
         {service.points.map((point) => (
           <li key={point}>{point}</li>
         ))}
       </ul>
+      <div className="service-gallery">
+        {service.photos.map((photo, idx) => (
+          <img
+            key={`${service.id}-photo-${idx}`}
+            src={photo}
+            alt={`${service.title} work ${idx + 1}`}
+            className="service-photo"
+            loading="lazy"
+            decoding="async"
+            width="320"
+            height="240"
+          />
+        ))}
+      </div>
     </article>
   );
 }
