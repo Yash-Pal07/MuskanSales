@@ -49,7 +49,7 @@ body {
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1.35fr 0.65fr;
+  grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.5fr);
   gap: clamp(16px, 2.4vw, 24px);
   align-items: center;
 }
@@ -64,9 +64,10 @@ body {
 }
 
 .hero-technician-image {
-  width: min(100%, 320px);
+  width: clamp(220px, 24vw, 300px);
   aspect-ratio: 3 / 4;
   object-fit: cover;
+  object-position: center top;
   border-radius: 18px;
   border: 2px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.24);
@@ -181,7 +182,8 @@ h1 {
 .grid {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: stretch;
 }
 
 .card {
@@ -192,6 +194,8 @@ h1 {
   box-shadow: 0 8px 25px rgba(10, 24, 64, 0.06);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -246,13 +250,13 @@ h1 {
 .service-gallery {
   margin-top: 12px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 8px;
 }
 
 .service-photo {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid #dbe6ff;
@@ -365,7 +369,7 @@ footer {
   }
 
   .hero-technician-image {
-    width: min(100%, 260px);
+    width: min(100%, 280px);
   }
 }
 
