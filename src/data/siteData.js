@@ -1,9 +1,9 @@
 export const CONTACT = {
-  phoneDisplay: "+91 62990 55812",
-  phoneRaw: "+916299055812",
-  whatsappUrl: "https://wa.me/916299055812",
-  email: "muskansales.service@gmail.com",
-  technicianImage: "/technician.svg",
+  phoneDisplay: "+91 90062 44122",
+  phoneRaw: "+919006244122",
+  whatsappUrl: "https://wa.me/919006244122",
+  email: "muskansales431@gmail.com",
+  technicianImage: "/technicanimg.jpeg",
 };
 
 // Update these photo paths anytime from code side.
@@ -14,6 +14,7 @@ export const BRANDS = [
   "Blowhot Kitchen Appliances Pvt Ltd",
   "RICO Appliances Pvt. Ltd.",
   "Aisen Home Appliance",
+  "Unnati submersible pumps and Motors"
 ];
 
 export const SERVICES = [
